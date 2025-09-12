@@ -1,7 +1,6 @@
-version: '3.8'
 services:
   gitlab:
-    image: gitlab/gitlab-ce:latest
+    image: gitlab/gitlab-ce:17.11.7-ce.0
     restart: always
     hostname: gitlab.example.com
     environment:
@@ -10,7 +9,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "22:22"
+      - "2222:22"
     volumes:
       - gitlab-config:/etc/gitlab
       - gitlab-logs:/var/log/gitlab
